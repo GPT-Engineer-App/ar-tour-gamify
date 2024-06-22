@@ -1,6 +1,7 @@
 import { Container, Text, VStack, Box, Button, HStack, Image, useToast, ScaleFade } from "@chakra-ui/react";
 import { useState } from "react";
 import { FaMapMarkerAlt, FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const attractions = [
   { id: 1, name: "Eiffel Tower", points: 10, image: "/images/eiffel-tower.jpg" },
@@ -47,6 +48,14 @@ const Index = () => {
             <Text fontSize="2xl" fontWeight="bold">Total Points: {totalPoints}</Text>
           </Box>
         </ScaleFade>
+        <HStack spacing={4} mt={8}>
+          <Link to="/treasure-hunt">
+            <Button colorScheme="blue">Start Treasure Hunt</Button>
+          </Link>
+          <Link to="/user-profile">
+            <Button colorScheme="green">View Profile</Button>
+          </Link>
+        </HStack>
       </VStack>
     </Container>
   );
